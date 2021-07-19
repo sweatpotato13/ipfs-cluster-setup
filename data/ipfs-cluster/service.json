@@ -1,0 +1,84 @@
+{
+    "cluster": {
+      "id": "Qma4NvZSsBWk2de97yjMuvPQqGsnup2VL93RjDNKovP3vN",
+      "peername": "nodename1",
+      "private_key": "CAASpwkwggSjAgEAAoIBAQDjFHAV/3qA1voAJQBxoBMMp/oNW7Cr6F3WNq59WpFCGiujjrNLGbf7hf6xP/gio2HrGUxin9OlTY86QsbcDHwaZPun2eLoDHKRcx4zliSJS/5aqhGmovQqf6ap3EwKmFHTLbsG7KGNWaGTMhLSrEdgTzMegrdOyd5vr++PyvXkzlsHOJHg/6bl36UvmYb+kmFfWp4nYt3+roenYJF3CagVxwcqb1ckzrxmcs5I+/eDtVSnD7WjNxPCslA4Q+fdcLlqgQvOBr6PRPsVE/41gwoPvATn5pA/+Q4QRe6tw35osDvxe3Sjsc3swuvxYsTw/03/qK46HnPDWlk1wmTNBu5pAgMBAAECggEAYGTQn8XvjrmzLlSGt7Un4Pt9XiZJ/O+KxeA4eeX0O4c4dxmgaoTkYNUkpMFu5+VLL61xi3wlL8qYvjaSi96Q3/N2EG6hr7d4+t1POL7Hi7DCrGH9VCtgUpoVeY2WifjW4zpKZkoU2hfuSrm628teETgNjyoV/lAbKHYaz4Nslk9lrDocdxgJCihe8Rz40KVHr5Ml1lpBND4uSWFGgiw6YUAukv1ilZdyWdoICycTCDiUNCT4HUMgteGrUJZv+7+GnQYEOMZ3zKmMydH26+ivLVHP27jmYthYxl+N5XYi65Mb1PbdHJpt7DcYF9DhYwwqKD1sjvMIyEWK1n5mIEIFwQKBgQD/80Q8oP5xG1QBllQuUfoc5VhVaYsGnweYl2sOMgYSKgh1ZPScGcdwH6eCksMeuGr2Il9LhNqU2jIFE1Bnz0eCwRaCvCEao1NIQ7G9wr1ZbTnXdiy3PLWKTInFGHhY+Ny1DJ1dWdEyCuiY/zKnqTF+SYDMft0rzp+sHXFJ0IKs1QKBgQDjH7woVUZx4OlqdX6HQiBq3AocfAeMcj7thTvHxkI6VC6dX6HE/ZyXiXyel7dfccbjDrVhmGx9NKwCr3GZbslhZBBhjJcfms6IkWxBuCi2SOiafgy4VF0QIB7EyxtK0Wws5cy8OvluXPdmR8H5Pv4XquV5AlXJHy8ujG9Rsg11RQKBgDKOSY80Oa37uOcrW2te0+l7P6x3UXe4V9bDKek+5kYWOV9+1nYy/VrfVcYL2TCrOq1tcqdHEanPQ4wPGZW3sqdYHmsqX9uUITIn9ObHnYEZexBdDk4PVsh/f8MHp1Xjqiy01iyHPjQFRZZa6hWF7PnF6QP7lxI9GPr1QdhTsEwVAoGALVjfu3nTN9d9IylUWvMj/9HxHuDQrQT+dXP9jJSUEotOR1OZu/ga9NKZlBycmyzfVeRQ6KyDNLh4g4y99LF++bf94UwtvDyvcer/H1wCnOqPrpDuPztw3VBcdFRNHbIUlB5Js2de998N8ljvbLFcECOp73A86owUYondjAUt1LUCgYEAvSUBaHqPaavvPuYgyozc4Akr8ycjPjtrsutB4C6kCJCYPKVo6mzS2/cS26Jw0CDVDIcAWQ0W/EX4W6J+6ocZatub5ZYMk6OWj6no9OvakYNjZArrhRBQZCufP4jIY7QwLtbgY2dHvwPv+QHproimtU6DtDZxa3QpCTm8UzUunD8=",
+      "secret": "9f878c3db5da101b41e7886b102139ff4234557c281d5c84ee6add62abaf5664",
+      "leave_on_shutdown": false,
+      "listen_multiaddress": "/ip4/0.0.0.0/tcp/9096",
+      "state_sync_interval": "10m0s",
+      "ipfs_sync_interval": "2m10s",
+      "replication_factor_min": -1,
+      "replication_factor_max": -1,
+      "monitor_ping_interval": "15s",
+      "peer_watch_interval": "5s",
+      "disable_repinning": false
+    },
+    "consensus": {
+      "raft": {
+        "init_peerset": [
+          "nodename1"
+        ],
+        "wait_for_leader_timeout": "2m",
+        "network_timeout": "20s",
+        "commit_retries": 1,
+        "commit_retry_delay": "200ms",
+        "backups_rotate": 6,
+        "heartbeat_timeout": "5s",
+        "election_timeout": "5s",
+        "commit_timeout": "500ms",
+        "max_append_entries": 64,
+        "trailing_logs": 10240,
+        "snapshot_interval": "2m0s",
+        "snapshot_threshold": 8192,
+        "leader_lease_timeout": "1s"
+      }
+    },
+    "api": {
+      "ipfsproxy": {
+        "node_multiaddress": "/dns4/ipfs-node/tcp/5001",
+        "listen_multiaddress": "/ip4/0.0.0.0/tcp/9095",
+        "read_timeout": "0s",
+        "read_header_timeout": "5s",
+        "write_timeout": "0s",
+        "idle_timeout": "1m0s"
+      },
+      "restapi": {
+        "http_listen_multiaddress": "/ip4/0.0.0.0/tcp/9094",
+        "read_timeout": "0s",
+        "read_header_timeout": "5s",
+        "write_timeout": "0s",
+        "idle_timeout": "2m0s",
+        "basic_auth_credentials": null,
+        "headers": {},
+        "cors_allowed_origins": ["*"],
+        "cors_allowed_methods": ["GET"],
+        "cors_allowed_headers": [],
+        "cors_exposed_headers": ["Content-Type", "X-Stream-Output", "X-Chunked-Output", "X-Content-Length"],
+        "cors_allow_credentials": true,
+        "cors_max_age": "0s"
+      }
+    },
+    "ipfs_connector": {
+      "ipfshttp": {
+        "node_multiaddress": "/dns4/ipfs-node/tcp/5001",
+        "connect_swarms_delay": "30s",
+        "pin_method": "refs",
+        "ipfs_request_timeout": "5m0s",
+        "pin_timeout": "24h0m0s",
+        "unpin_timeout": "3h0m0s"
+      }
+    },
+    "pin_tracker": {
+      "maptracker": { "max_pin_queue_size": 50000, "concurrent_pins": 10 },
+      "stateless": { "max_pin_queue_size": 50000, "concurrent_pins": 10 }
+    },
+    "monitor": {
+      "monbasic": { "check_interval": "15s" },
+      "pubsubmon": { "check_interval": "15s" }
+    },
+    "informer": {
+      "disk": { "metric_ttl": "30s", "metric_type": "freespace" },
+      "numpin": { "metric_ttl": "10s" }
+    }
+  }

@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+    ipfs-node:
+        image: ipfs/go-ipfs:latest
+        container_name: ipfs-node
+        volumes:
+            - ./data/ipfs:/data/ipfs
+            - ./data/ipfs-staging:/staging
+        ports:
+            - "8080:8080"
+            - "4001:4001"
+            - "5001:5001"
+    ipfs-cluster:
+        image: ipfs/ipfs-cluster:latest
+        container_name: ipfs-cluster
+        volumes:
+            - ./data/ipfs:/data/ipfs
+            - ./data/ipfs-cluster:/data/ipfs-cluster
+        ports:
+            - "9094:9094"
+            - "9095:9095"
+            - "9096:9096"

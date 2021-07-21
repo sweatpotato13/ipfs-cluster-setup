@@ -17,7 +17,7 @@
     "consensus": {
       "raft": {
         "init_peerset": [
-          "nodename1"
+          "Qma4NvZSsBWk2de97yjMuvPQqGsnup2VL93RjDNKovP3vN"
         ],
         "wait_for_leader_timeout": "2m",
         "network_timeout": "20s",

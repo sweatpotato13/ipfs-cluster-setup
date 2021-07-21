@@ -23,15 +23,15 @@
 "cluster": {
   "id": "ID",
   "peername": "MY_NODENAME",
-  "private_key": "Privatekey",
-  "secret": "Secret",
+  "private_key": "PRIVATE_KEY",
+  "secret": "SECRET",
 ...
 
 "consensus": {
   "raft": {
     "init_peerset": [
-      "MY_NODENAME",
-      "OTHER_PEERS_NODENAME"
+      "ID",
+      "OTHER_PEERS_NODEID"
     ],
 ```
 
